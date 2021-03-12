@@ -6,27 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto</title>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
     <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
-    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-partycle-system-component@1.0.x/dist/aframe-partycle-system-component.min.js"></script>
 </head>
 <body>
     <a-scene physics="gravity: -20">
 
         <a-assets>
+            <!--Musica ambiental-->
             <audio id="fondo" src="assets\audio\music.mp3"></audio>
 
-
-
-
-
+            <!-- Sala -->
+            <a-assets-item id="tv" src="assets\models\Sala\tv\scene.gltf"></a-assets-items>
 
         </a-assets>
 
-        <a-sound src="#fondo" autoplay="true" loop="true"></a-sound>
+        <!--Importar Sonido-->
 
-        <a-entity environment="preset: forest; fog: 0.8; ground: flat; groundYScale: 100 playArea: 5"></a-entity>
+        <a-sound src="#fondo" autoplay="false" loop="true"></a-sound>
+
+        <!-- Importar Modelos-->
+
+        <a-entity gltf-model="#tv" scale="0.012 0.012 0.012" position="5 5 5"></a-entity>
+
+
+
+        <!-- Plano y Camara -->
+        <a-entity id="rig" camera look-controls wasd-controls="acceleration : 110" position="14 -2 9" kinematic-body></a-entity>
+        <a-plane position="0 2 -5" rotation="90 0 0" scale="50 50 50" material="opacity: 0.0; transparent:true" static-body></a-plane>
 
     </a-scene>
     
