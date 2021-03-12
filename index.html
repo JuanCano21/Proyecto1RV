@@ -12,8 +12,22 @@
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
 </head>
 <body>
-    <a-scene>
+    <a-scene physics="gravity: -20">
+
+        <a-assets>
+            <audio id="fondo" src="assets\audio\music.mp3"></audio>
+
+
+
+
+
+
+        </a-assets>
+
+        <a-sound src="#fondo" autoplay="true" loop="true"></a-sound>
+
         <a-entity environment="preset: forest; fog: 0.8; ground: flat; groundYScale: 100 playArea: 5"></a-entity>
+
     </a-scene>
     
 </body>
