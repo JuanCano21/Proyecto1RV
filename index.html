@@ -17,8 +17,8 @@
             <!--Musica ambiental-->
             <audio id="fondo" src="assets\audio\music.mp3"></audio>
 
-            <!-- Sala -->
-            <a-assets-item id="tv" src="assets\models\Sala\tv\scene.gltf"></a-assets-items>
+            <!-- Modelos sala-->
+            <a-asset-item id="tv" src="assets\models\Sala\tv\scene.gltf"></a-assets-items>
 
         </a-assets>
 
@@ -34,7 +34,7 @@
 
         <!-- Plano y Camara -->
         <a-entity id="rig" camera look-controls wasd-controls="acceleration : 110" position="14 -2 9" kinematic-body></a-entity>
-        <a-plane position="0 2 -5" rotation="90 0 0" scale="50 50 50" material="opacity: 0.0; transparent:true" static-body></a-plane>
+        <a-plane position="0 0 -5" rotation="90 0 0" scale="50 50 50" static-body></a-plane>
 
     </a-scene>
     
