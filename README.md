@@ -12,6 +12,9 @@ Para el desarrollo del proyecto se tuvieron que seguir una serie de pasos para p
 Dificultades en el proceso:
 - Referiendonos primero a los conceptos que abarcan en a-frame, para mi Daniel Cano se me dificulta importar los modelos a a-frame(aun habiendo seguido todos los pasos me fallaba).
 - Tuve problemas para como definit las colisiones, por ende no se realizaron en el trabajo.
--Hubo un pesimo trabajo en equipo, literalmente yo Daniel Cano intente todo lo que pude aun realizandoolo solo.
+-No hubo un buen trabajo de equipo, la mayoria o por decir casi todo lo que se encuentra en este repositorio es por cuenta mia.
+
+Reflexion:
+Trabajar desde mucho tiempo con anticipacion dichas entregas.
 
 Muchas gracias!

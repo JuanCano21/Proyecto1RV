@@ -35,7 +35,7 @@
 
             <!-- Puertas -->
             <a-asset-item id="puertae" src="assets\models\Casa\puerta\scene.gltf"></a-assets-items>
-            <a-asset-item id="puertae" src="assets\models\Casa\puerta\scene.gltf"></a-assets-items>
+            <a-asset-item id="puertab" src="assets\models\Casa\puerta\scene.gltf"></a-assets-items>
 
             <!-- Cocina -->
             <a-asset-item id="silla1" src="assets\models\Cocina\silla\scene.gltf"></a-assets-items>
@@ -65,20 +65,42 @@
 
         <!--Importar Sonido-->
 
-        <a-sound src="#fondo" autoplay="true" loop="true"></a-sound>
+        <a-sound src="#fondo" autoplay="true" loop="true" volume="0.7"></a-sound>
 
         <!-- Importar Apartamento -->
-        <a-entity obj-model="obj: #apto; mtl: #materialApto" position="0 -6 0" rotation="0 90 0"></a-entity>
+        <a-entity obj-model="obj: #apto; mtl: #materialApto" position="0 -4 0" rotation="0 180 0" scale="0.010 0.010 0.010"></a-entity>
 
+        <!-- Importar Puertas -->
+        <a-entity gltf-model="#puertae" scale="0.845 0.941 1.024" position="14 -4 9"></a-entity> 
+        <a-entity gltf-model="#puertab" scale="0.845 0.941 1.024" position="7.8 -4 -3"></a-entity>
 
+        <!-- Importar Sala -->
+        <a-entity gltf-model="#tv" scale="0.845 0.941 1.024" position="14 -4 9"></a-entity> 
+        <a-entity gltf-model="#mesatv" scale="0.845 0.941 1.024" position="7.8 -4 -3"></a-entity>
+        <a-entity gltf-model="#sofa" scale="0.845 0.941 1.024" position="14 -4 9"></a-entity> 
+        <a-entity gltf-model="#mesasofa" scale="0.845 0.941 1.024" position="7.8 -4 -3"></a-entity>
+        <a-entity gltf-model="#planta" scale="0.845 0.941 1.024" position="14 -4 9"></a-entity> 
+
+        <!-- Importar Cocina -->
+        <a-entity gltf-model="#silla1" scale="0.845 0.941 1.024" position="14 -4 9"></a-entity> 
+        <a-entity gltf-model="#silla2" scale="0.845 0.941 1.024" position="7.8 -4 -3"></a-entity>
+        <a-entity gltf-model="#silla3" scale="0.845 0.941 1.024" position="14 -4 9"></a-entity> 
+        <a-entity gltf-model="#elementos" scale="0.845 0.941 1.024" position="7.8 -4 -3"></a-entity>
+
+        <!-- Importar Baño -->
+        <a-entity gltf-model="#bañera" scale="0.845 0.941 1.024" position="14 -4 9"></a-entity> 
+        <a-entity gltf-model="#inodoro" scale="0.845 0.941 1.024" position="7.8 -4 -3"></a-entity>
+        <a-entity gltf-model="#lavamanos" scale="0.845 0.941 1.024" position="14 -4 9"></a-entity>
         
-        
-        
-        <!-- Importar Modelos-->
+        <!-- Importar CuartoPapas -->
+        <a-entity gltf-model="#camap" scale="0.845 0.941 1.024" position="14 -4 9"></a-entity> 
+        <a-entity gltf-model="#closet" scale="0.845 0.941 1.024" position="7.8 -4 -3"></a-entity>
+        <a-entity gltf-model="#cortina" scale="0.845 0.941 1.024" position="14 -4 9"></a-entity> 
+        <a-entity gltf-model="#silla" scale="0.845 0.941 1.024" position="7.8 -4 -3"></a-entity>
 
-        <a-entity gltf-model="#tv" scale="0.012 0.012 0.012" position="5 5 5"></a-entity>
-
-
+        <!-- Importar CuartoHijo -->
+        <a-entity gltf-model="#cuna" scale="0.845 0.941 1.024" position="14 -4 9"></a-entity> 
+        <a-entity gltf-model="#mesah" scale="0.845 0.941 1.024" position="7.8 -4 -3"></a-entity>
 
         <!-- Plano y Camara -->
         <a-entity id="rig" camera look-controls wasd-controls="acceleration : 110" position="14 -2 9" kinematic-body></a-entity>
