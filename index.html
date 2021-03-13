@@ -14,18 +14,66 @@
     <a-scene physics="gravity: -20">
 
         <a-assets>
+            <img id="skyMap" src="assets\image\city.jpg">
+
+
             <!--Musica ambiental-->
             <audio id="fondo" src="assets\audio\music.mp3"></audio>
 
-            <!-- Modelos sala-->
+            <!-- Apartamento-->
+            <a-asset-item id="apto" src="assets\models\Apartamento\apartament.obj"></a-asset-item>
+            <a-asset-item id="materialApto" src="assets\models\Apartamento\apartament.mtl"></a-asset-item>
+
+
+
+            <!-- Sala -->
             <a-asset-item id="tv" src="assets\models\Sala\tv\scene.gltf"></a-assets-items>
+            <a-asset-item id="mesatv" src="assets\models\Sala\Mesa\scene.gltf"></a-assets-items>
+            <a-asset-item id="sofa" src="assets\models\Sala\Sofa\scene.gltf"></a-assets-items>
+            <a-asset-item id="mesasofa" src="assets\models\Sala\mesasofa\scene.gltf"></a-assets-items>
+            <a-asset-item id="planta" src="assets\models\Sala\planta\scene.gltf"></a-assets-items>
+
+            <!-- Puertas -->
+            <a-asset-item id="puertae" src="assets\models\Casa\puerta\scene.gltf"></a-assets-items>
+            <a-asset-item id="puertae" src="assets\models\Casa\puerta\scene.gltf"></a-assets-items>
+
+            <!-- Cocina -->
+            <a-asset-item id="silla1" src="assets\models\Cocina\silla\scene.gltf"></a-assets-items>
+            <a-asset-item id="silla2" src="assets\models\Cocina\silla\scene.gltf"></a-assets-items>
+            <a-asset-item id="silla3" src="assets\models\Cocina\silla\scene.gltf"></a-assets-items>
+            <a-asset-item id="elementos" src="assets\models\Cocina\elementos\scene.gltf"></a-assets-items>
+
+            <!-- Baño -->
+            <a-asset-item id="bañera" src="assets\models\Baño\bañera\scene.gltf"></a-assets-items>
+            <a-asset-item id="inodoro" src="assets\models\Baño\inodoro\scene.gltf"></a-assets-items>
+            <a-asset-item id="lavamanos" src="assets\models\Baño\lavamanos\scene.gltf"></a-assets-items>
+            
+            <!-- CuartoPapas-->
+            <a-asset-item id="camap" src="assets\models\CuartoPapas\camap\scene.gltf"></a-assets-items>
+            <a-asset-item id="closet" src="assets\models\CuartoPapas\closet\scene.gltf"></a-assets-items>
+            <a-asset-item id="cortina" src="assets\models\CuartoPapas\cortinas\scene.gltf"></a-assets-items>
+            <a-asset-item id="silla" src="assets\models\CuartoPapas\sillap\scene.gltf"></a-assets-items>
+
+            <!-- CuartoHijos -->
+            <a-asset-item id="cuna" src="assets\models\CuartoHijo\cuna\scene.gltf"></a-assets-items>
+            <a-asset-item id="mesah" src="assets\models\CuartoHijo\mesah\scene.gltf"></a-assets-items>
+
 
         </a-assets>
 
+        <a-sky src="#skyMap" rotation="0 90 0"></a-sky>
+
         <!--Importar Sonido-->
 
-        <a-sound src="#fondo" autoplay="false" loop="true"></a-sound>
+        <a-sound src="#fondo" autoplay="true" loop="true"></a-sound>
 
+        <!-- Importar Apartamento -->
+        <a-entity obj-model="obj: #apto; mtl: #materialApto" position="0 -6 0" rotation="0 90 0"></a-entity>
+
+
+        
+        
+        
         <!-- Importar Modelos-->
 
         <a-entity gltf-model="#tv" scale="0.012 0.012 0.012" position="5 5 5"></a-entity>
@@ -34,7 +82,7 @@
 
         <!-- Plano y Camara -->
         <a-entity id="rig" camera look-controls wasd-controls="acceleration : 110" position="14 -2 9" kinematic-body></a-entity>
-        <a-plane position="0 0 -5" rotation="90 0 0" scale="50 50 50" static-body></a-plane>
+        <a-plane position="0 -2 -5" rotation="90 0 0" scale="50 50 50" static-body></a-plane>
 
     </a-scene>
     
